@@ -85,7 +85,7 @@
     footer .footer-left, footer .footer-center, footer .footer-right { display:flex; align-items:center; }
     footer .footer-center { position:absolute; left:50%; transform:translateX(-50%); top:50%; translate:0 -50%; }
     footer .footer-right { margin-left:auto; display:flex; gap:10px; }
-    footer a { font-size:13px; font-weight:500; }
+    footer .footer-center a { font-size:13px; font-weight:500; }
     @media (max-width:720px){
       footer { flex-wrap:wrap; justify-content:center; height:auto; padding:10px 20px 16px; }
       footer .footer-center { position:static; transform:none; translate:0; order:3; width:100%; justify-content:center; margin-top:4px; }
@@ -136,7 +136,7 @@
       <h3 id="experiments-title" class="section-title"> Apps</h3>
       <div class="experiments-wrapper">
         <ul class="tabs" role="tablist">
-          <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-holistaff" id="tab-holistaff" data-key="holistaff" data-logo="assets/holostaffai-logo.png" data-title="Holistaff AI" data-desc="Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs."><span>Holistaff AI</span></button></li>
+          <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-holistaff" id="tab-holistaff" data-key="holistaff" data-logo="assets/holostaffai-logo.png" data-title="Holostaff AI" data-desc="Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs."><span>Holistaff AI</span></button></li>
           <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-agentsplus" id="tab-agentsplus" data-key="agentsplus" data-logo="assets/agentsplus-logo.png" data-title="Agents +" data-desc="Composable multi-agent workflows with real-time coordination. Spin up research, analysis, and action agents collaborating live."><span>Agents +</span></button></li>
           <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-tutorlm" id="tab-tutorlm" data-key="tutorlm" data-logo="assets/tutorlm-logo.png" data-title="tutorLM" data-desc="Adaptive tutoring engine. Personalized micro-lessons, concept scaffolding, and mastery-based progression analytics."><span>tutorLM</span></button></li>
         </ul>
