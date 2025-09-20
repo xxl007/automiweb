@@ -86,6 +86,12 @@
     footer .footer-center { position:absolute; left:50%; transform:translateX(-50%); top:50%; translate:0 -50%; }
     footer .footer-right { margin-left:auto; display:flex; gap:10px; }
     footer .footer-center a { font-size:13px; font-weight:500; }
+
+    .social a { border-radius:var(--r-control); background:#ffffff; backdrop-filter:none; box-shadow:0 2px 6px -2px rgba(0,0,0,.15); width:32px; height:32px; padding:0; display:inline-flex; align-items:center; justify-content:center; line-height:1; transition: background .35s, border-color .35s, box-shadow .35s; }
+    .social a:hover { background:var(--fg); border-color:var(--fg); box-shadow:0 4px 10px -4px rgba(0,0,0,.28); }
+    .social a:hover svg { stroke:#fff; }
+    .social svg { width:16px; height:16px; stroke:#1c4a58; transition: stroke .35s; }
+
     @media (max-width:720px){
       footer { flex-wrap:wrap; justify-content:center; height:auto; padding:10px 20px 16px; }
       footer .footer-center { position:static; transform:none; translate:0; order:3; width:100%; justify-content:center; margin-top:4px; }
