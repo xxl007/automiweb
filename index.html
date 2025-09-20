@@ -53,14 +53,8 @@
     /* Vertical tabs */
     .tabs { list-style:none; margin:0; padding:6px; display:flex; flex-direction:column; gap:14px; width:190px; background:rgba(255,255,255,.55); backdrop-filter:blur(22px) saturate(1.3); border:1px solid rgba(90,160,180,.25); border-radius:26px; position:relative; box-shadow:0 8px 32px -12px rgba(0,80,100,.25); }
     .tabs:before { content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; background:linear-gradient(140deg,rgba(60,170,217,.5),rgba(83,224,188,.35),rgba(75,206,198,.4)); -webkit-mask:linear-gradient(#000,#000) content-box, linear-gradient(#000,#000); mask:linear-gradient(#000,#000) content-box, linear-gradient(#000,#000); -webkit-mask-composite:xor; mask-composite:exclude; }
-    .tab-btn { position:relative; display:flex; align-items:center; gap:12px; padding:14px 16px 14px 14px; background:radial-gradient(circle at 60% 40%,rgba(255,255,255,.9),rgba(255,255,255,.6)); border:1px solid rgba(60,170,217,.25); border-radius:18px; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:500; letter-spacing:.4px; color:#144052; cursor:pointer; box-shadow:0 2px 4px rgba(0,0,0,.05), 0 0 0 2px rgba(255,255,255,.35) inset; transition:all .4s cubic-bezier(.4,.2,.2,1); text-align:left; overflow:hidden; }
-    .tab-btn img { width:30px; height:30px; object-fit:contain; filter:drop-shadow(0 2px 4px rgba(0,0,0,.15)); }
-    .tab-btn:before { content:""; position:absolute; inset:0; background:linear-gradient(120deg,var(--accent1),var(--accent2),var(--accent3)); opacity:0; transition:opacity .5s; mix-blend-mode:overlay; }
-    .tab-btn.active, .tab-btn:focus-visible { outline:none; color:#fff; }
-    .tab-btn.active { background:linear-gradient(140deg,var(--accent1) 0%,var(--accent2) 38%,var(--accent3) 85%); box-shadow:0 6px 20px -4px rgba(60,170,217,.55),0 0 0 1.2px rgba(255,255,255,.9) inset; border-color:rgba(255,255,255,.55); }
-    .tab-btn.active img { filter:brightness(0) invert(1) drop-shadow(0 3px 8px rgba(0,0,0,.25)); }
-    .tab-btn:hover:not(.active) { border-color:var(--accent3); box-shadow:0 4px 14px -4px rgba(60,170,217,.35); }
-    .tab-btn:hover:before { opacity:.55; }
+    .tab-btn { position:relative; display:flex; align-items:center; justify-content:center; gap:0; padding:0 12px; height:70px; background:radial-gradient(circle at 60% 40%,rgba(255,255,255,.9),rgba(255,255,255,.6)); border:1px solid rgba(60,170,217,.25); border-radius:18px; font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; letter-spacing:.6px; color:#144052; cursor:pointer; box-shadow:0 2px 4px rgba(0,0,0,.05), 0 0 0 2px rgba(255,255,255,.35) inset; transition:all .4s cubic-bezier(.4,.2,.2,1); text-align:center; overflow:hidden; text-transform:uppercase; }
+    .tab-btn img { display:none; }
 
     /* Content Panel */
     .panel { flex:1; background:var(--panel-glass); backdrop-filter:blur(26px) saturate(1.6); border:1px solid rgba(60,170,217,.25); border-radius:34px; display:flex; padding:46px 54px; gap:54px; box-shadow:0 10px 48px -18px rgba(0,70,90,.4), 0 0 0 1px rgba(255,255,255,.45) inset; min-height:440px; position:relative; overflow:hidden; }
@@ -127,7 +121,7 @@
   </header>
   <main>
     <section class="hero" aria-labelledby="lab-title">
-      <h1 id="lab-title">AI Innovation Lab</h1>
+      <h1 id="lab-title">Next-gen apps, powered by AI </h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
     </section>
 
@@ -135,13 +129,17 @@
       <h3 id="experiments-title" class="section-title">Experiments</h3>
       <div class="experiments-wrapper">
         <ul class="tabs" role="tablist">
-          <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-holistaff" id="tab-holistaff" data-key="holistaff" data-title="Holistaff AI" data-desc="Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs."><img src="assets/holostaffai-logo.png" alt="Holistaff AI" /> Holistaff AI</button></li>
-          <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-agentsplus" id="tab-agentsplus" data-key="agentsplus" data-title="Agents +" data-desc="Composable multi-agent workflows with real-time coordination. Spin up research, analysis, and action agents collaborating live."><img src="assets/agentsplus-logo.png" alt="Agents +" /> Agents +</button></li>
-          <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-tutorlm" id="tab-tutorlm" data-key="tutorlm" data-title="tutorLM" data-desc="Adaptive tutoring engine. Personalized micro-lessons, concept scaffolding, and mastery-based progression analytics."><img src="assets/tutorlm-logo.png" alt="tutorLM" /> tutorLM</button></li>
+          <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-holistaff" id="tab-holistaff" data-key="holistaff" data-logo="assets/holostaffai-logo.png" data-title="Holistaff AI" data-desc="Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs.">Holistaff AI</button></li>
+          <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-agentsplus" id="tab-agentsplus" data-key="agentsplus" data-logo="assets/agentsplus-logo.png" data-title="Agents +" data-desc="Composable multi-agent workflows with real-time coordination. Spin up research, analysis, and action agents collaborating live.">Agents +</button></li>
+          <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-tutorlm" id="tab-tutorlm" data-key="tutorlm" data-logo="assets/tutorlm-logo.png" data-title="tutorLM" data-desc="Adaptive tutoring engine. Personalized micro-lessons, concept scaffolding, and mastery-based progression analytics.">tutorLM</button></li>
         </ul>
         <div class="panel" id="experiment-panel" role="tabpanel" aria-labelledby="tab-holistaff">
           <div class="panel-col-text">
-            <h2 id="experiment-title">Holistaff AI</h2>
+            <div id="experiment-logo-wrap" style="margin:0 0 18px;display:flex;align-items:center;gap:14px;">
+              <img id="experiment-logo" src="assets/holostaffai-logo.png" alt="Holistaff AI logo" style="height:54px;width:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.2));" />
+              <h2 id="experiment-title" style="margin:0;position:absolute;left:-9999px;">Holistaff AI</h2>
+              <span id="experiment-name" style="font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:600;background:linear-gradient(90deg,var(--fg),var(--accent3));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.5px;">Holistaff AI</span>
+            </div>
             <p id="experiment-desc">Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs.</p>
             <p id="experiment-secondary">Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <button class="cta" id="cta-btn" type="button"><span>Try It Now</span></button>
@@ -170,8 +168,8 @@
     const tabs = document.querySelectorAll('.tab-btn');
     const panel = document.getElementById('experiment-panel');
     const titleEl = document.getElementById('experiment-title');
-    const descEl = document.getElementById('experiment-desc');
-    const secondaryEl = document.getElementById('experiment-secondary');
+    const nameEl = document.getElementById('experiment-name');
+    const logoEl = document.getElementById('experiment-logo');
 
     tabs.forEach(btn => {
       btn.addEventListener('click', () => activate(btn));
@@ -186,6 +184,9 @@
       tabs.forEach(t=>{ t.classList.toggle('active', t===btn); t.setAttribute('aria-selected', t===btn); });
       panel.setAttribute('aria-labelledby', btn.id);
       titleEl.textContent = btn.dataset.title;
+      nameEl.textContent = btn.dataset.title;
+      logoEl.src = btn.dataset.logo;
+      logoEl.alt = btn.dataset.title + ' logo';
       descEl.textContent = btn.dataset.desc;
       secondaryEl.textContent = 'Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
       // CTA behavior placeholder
