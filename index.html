@@ -142,16 +142,67 @@
   <main>
     <section class="hero" aria-labelledby="lab-title">
       <h1 id="lab-title">Next-gen web, powered by AI </h1>
-      <p>We rethink the internet from scratch with AI at its core.</p>
+      <p>We are rethinking the internet, with AI at the core.</p>
     </section>
 
     <section aria-labelledby="experiments-title" style="display:flex; flex-direction:column; flex:1; min-height:0;">
       <h3 id="experiments-title" class="section-title"> Apps</h3>
       <div class="experiments-wrapper">
         <ul class="tabs" role="tablist">
-          <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-holistaff" id="tab-holistaff" data-key="holistaff" data-logo="assets/holostaffai-logo.png" data-title="Holostaff AI" data-desc="Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs."><span>Holostaff AI</span></button></li>
-          <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-agentsplus" id="tab-agentsplus" data-key="agentsplus" data-logo="assets/agentsplus-logo.png" data-title="Agents +" data-desc="Composable multi-agent workflows with real-time coordination. Spin up research, analysis, and action agents collaborating live."><span>Agents +</span></button></li>
-          <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-tutorlm" id="tab-tutorlm" data-key="tutorlm" data-logo="assets/tutorlm-logo.png" data-title="tutorLM" data-desc="Adaptive tutoring engine. Personalized micro-lessons, concept scaffolding, and mastery-based progression analytics."><span>tutorLM</span></button></li>
+          <li>
+            <button
+              class="tab-btn active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-holistaff"
+              id="tab-holistaff"
+              data-key="holistaff"
+              data-logo="assets/holostaffai-logo.png"
+              data-title="Holostaff AI"
+              data-media="https://firebasestorage.googleapis.com/v0/b/automi-ai.firebasestorage.app/o/hero-2.gif?alt=media&token=d0c1b34a-936a-4caa-952d-6585624e80be"
+              data-cta="https://holostaff.ai"
+              data-desc="Hiring teams need to sift thousands of resumes to fill roles fast. Manual screening is slow, inconsistent, and buries high-signal talent. Holostaff AI auto-summarizes resumes, maps skills to roles, and surfaces the best matches instantly."
+              data-secondary="Start with a role, upload resumes or link your ATS — get ranked shortlists and structured candidate briefs in minutes."
+            >
+              <span>Holostaff AI</span>
+            </button>
+          </li>
+          <li>
+            <button
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-tutorlm"
+              id="tab-tutorlm"
+              data-key="tutorlm"
+              data-logo="assets/tutorlm-logo.png"
+              data-title="tutorLM"
+              data-media="https://firebasestorage.googleapis.com/v0/b/automi-ai.firebasestorage.app/o/tutorlm.gif?alt=media&token=d72ed848-e0f7-4d01-b567-125b1731a386"
+              data-cta="https://tutorlm.my"
+              data-desc="Learners want to master tough concepts at their own pace. One-size-fits-all courses stall progress and leave gaps unaddressed. tutorLM adapts in real time with micro-lessons, scaffolding, and mastery checks to move you forward confidently."
+              data-secondary="Personalized paths, spaced practice, and actionable insights for learners and instructors."
+            >
+              <span>tutorLM</span>
+            </button>
+          </li>
+          <li>
+            <button
+              class="tab-btn"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-agentsplus"
+              id="tab-agentsplus"
+              data-key="agentsplus"
+              data-logo="assets/agentsplus-logo.png"
+              data-title="Agents +"
+              data-media="https://firebasestorage.googleapis.com/v0/b/automi-ai.firebasestorage.app/o/agentsplus.gif?alt=media&token=b225dd63-bfc1-428a-aa83-5cf2b098549f"
+              data-desc="Teams need research, analysis, and action across apps to ship work faster. Single agents lose context and struggle to coordinate complex tasks. Agents+ composes cooperative agents with shared memory and real-time orchestration for end-to-end workflows."
+              data-secondary="Coming soon."
+              data-soon="true"
+            >
+              <span>Agents +</span>
+            </button>
+          </li>
         </ul>
         <div class="panel" id="experiment-panel" role="tabpanel" aria-labelledby="tab-holistaff">
           <div class="panel-col-text">
@@ -159,12 +210,12 @@
               <img id="experiment-logo" src="assets/holostaffai-logo.png" alt="Holistaff AI logo" style="height:50px;width:auto;" />
               <h2 id="experiment-title">Holostaff AI</h2>
             </div>
-            <p id="experiment-desc">Intelligent staffing copilot: streamline candidate discovery, auto-summarize resumes, and match talent fit with adaptive skill graphs.</p>
-            <p id="experiment-secondary">Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button class="cta" id="cta-btn" type="button"><span>Try It Now</span></button>
+            <p id="experiment-desc">Hiring teams need to sift thousands of resumes to fill roles fast. Manual screening is slow, inconsistent, and buries high-signal talent. Holostaff AI auto-summarizes resumes, maps skills to roles, and surfaces the best matches instantly.</p>
+            <p id="experiment-secondary">Start with a role, upload resumes or link your ATS — get ranked shortlists and structured candidate briefs in minutes.</p>
+            <button class="cta" id="cta-btn" type="button" aria-label="Open Holostaff AI in a new tab"><span>Try It Now</span></button>
           </div>
           <div class="media-box">
-            <img src="https://firebasestorage.googleapis.com/v0/b/automi-ai.firebasestorage.app/o/hero-2.gif?alt=media&token=d0c1b34a-936a-4caa-952d-6585624e80be" alt="Experiment preview" />
+            <img id="experiment-media" src="https://firebasestorage.googleapis.com/v0/b/automi-ai.firebasestorage.app/o/hero-2.gif?alt=media&token=d0c1b34a-936a-4caa-952d-6585624e80be" alt="Holostaff AI preview" />
           </div>
         </div>
       </div>
@@ -188,6 +239,10 @@
     const panel = document.getElementById('experiment-panel');
     const titleEl = document.getElementById('experiment-title');
     const logoEl = document.getElementById('experiment-logo');
+    const descEl = document.getElementById('experiment-desc');
+    const secondaryEl = document.getElementById('experiment-secondary');
+    const mediaEl = document.getElementById('experiment-media');
+    const ctaBtn = document.getElementById('cta-btn');
 
     tabs.forEach(btn => {
       btn.addEventListener('click', () => activate(btn));
@@ -201,14 +256,38 @@
     function activate(btn){
       tabs.forEach(t=>{ t.classList.toggle('active', t===btn); t.setAttribute('aria-selected', t===btn); });
       panel.setAttribute('aria-labelledby', btn.id);
+
+      // Core content
       titleEl.textContent = btn.dataset.title;
       logoEl.src = btn.dataset.logo;
       logoEl.alt = btn.dataset.title + ' logo';
-      descEl.textContent = btn.dataset.desc;
-      secondaryEl.textContent = 'Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-      // CTA behavior placeholder
-      document.getElementById('cta-btn').onclick = () => alert('Launching '+btn.dataset.title+' (placeholder)');
+      descEl.textContent = btn.dataset.desc || '';
+      secondaryEl.textContent = btn.dataset.secondary || '';
+
+      // Media
+      if (btn.dataset.media) {
+        mediaEl.src = btn.dataset.media;
+        mediaEl.alt = btn.dataset.title + ' preview';
+      }
+
+      // CTA
+      const url = btn.dataset.cta;
+      const comingSoon = btn.dataset.soon === 'true';
+      if (comingSoon || !url) {
+        ctaBtn.style.display = 'none';
+        if (!btn.dataset.secondary) secondaryEl.textContent = 'Coming soon.';
+      } else {
+        ctaBtn.style.display = 'inline-block';
+        ctaBtn.onclick = () => window.open(url, '_blank', 'noopener');
+        ctaBtn.setAttribute('aria-label', `Open ${btn.dataset.title} in a new tab`);
+      }
     }
+
+    // Initialize CTA for default active tab
+    (function init(){
+      const active = document.querySelector('.tab-btn.active');
+      if (active) activate(active);
+    })();
   </script>
 </body>
 </html>
