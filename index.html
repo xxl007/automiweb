@@ -198,7 +198,9 @@
               data-media="https://firebasestorage.googleapis.com/v0/b/automi-ai.firebasestorage.app/o/agentsplus.gif?alt=media&token=b225dd63-bfc1-428a-aa83-5cf2b098549f"
               data-desc="<strong>Orchestrate your work with agentic workflows.</strong><br/><br/>Modern work spans many apps and teams. The coordination burden slows delivery and fragments context. Agents+ understands your goal, maps it to a best‑practice Workflow, and executes the required Actions across your tools — transparent, collaborative, and citation‑backed."
               data-secondary="Human‑in‑the‑loop orchestration with governed connectors, progress tracking, and a best-practice workflow templates for developers, product, sales and marketing professionals."
-              data-soon="true"
+                data-soon="false"
+                data-cta="https://forms.gle/KWe29pbPKnw8LkSM9"
+                data-cta-label="Join Waitlist"
             >
               <span>Agents +</span>
             </button>
@@ -281,6 +283,8 @@
         ctaBtn.style.display = 'inline-block';
         ctaBtn.onclick = () => window.open(url, '_blank', 'noopener');
         ctaBtn.setAttribute('aria-label', `Open ${btn.dataset.title} in a new tab`);
+        const label = btn.dataset.ctaLabel || 'Try It Now';
+        ctaBtn.querySelector('span').textContent = label;
       }
     }
 
