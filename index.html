@@ -55,7 +55,15 @@
     .panel-col-text p { margin:0 0 18px; font-size:16px; line-height:1.6; color:#1d3f49; }
 
     .media-box { flex:1; background:#e6f7ff; border:var(--border-style); position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .media-box img, .media-box video { mix-blend-mode:normal; }
+    .media-box img, .media-box video {
+      display:block;
+      max-width:100%;
+      max-height:100%;
+      height:auto;
+      margin: 0 auto; /* ensure horizontal centering */
+      mix-blend-mode:normal;
+      object-fit: contain; /* keep aspect ratio within box */
+    }
 
     .cta { background:var(--fg); border:var(--border-style); color: var(--bg); padding: 10px 20px; font-family: 'Space Grotesk', monospace; font-weight: 700; text-transform: uppercase; cursor: pointer; }
     .cta:hover { background:var(--accent3); color: var(--ink); }
